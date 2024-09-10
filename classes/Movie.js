@@ -23,6 +23,14 @@ class Movie extends Media{
         }
         return highestDuration;
     }
+
+    static calculateAverageRating(movie){
+        let sumOfrating = 0
+        for(let i = 0; i < movie.length; i++){
+            sumOfrating += movie[i].rating
+        }
+        return sumOfrating / movie.length
+    }
 }
 // don't change below
 module.exports = Movie;

@@ -24,8 +24,16 @@ class Book extends Media {
             }        
        
         return highestRatedBook
+        }
     }
-}
+
+    static calculateAverageRating(book){
+        let sumOfrating = 0
+        for(let i = 0; i < book.length; i++){
+            sumOfrating += book[i].rating
+        }
+        return sumOfrating / book.length
+    }
 }
 
 
